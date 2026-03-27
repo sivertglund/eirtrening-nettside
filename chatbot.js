@@ -138,6 +138,12 @@
 
   // Inject HTML
   const chatHTML = `
+    <div class="chatbot-hint" id="chatbotHint">
+      <span>Lurer du på noe? Spør <b>EIRbot</b></span>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/>
+      </svg>
+    </div>
     <button class="chatbot-toggle" id="chatbotToggle" aria-label="Åpne chat">
       <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
     </button>
@@ -166,10 +172,40 @@
   const messages = document.getElementById('chatMessages');
   const input = document.getElementById('chatInput');
   const send = document.getElementById('chatSend');
+  const hint = document.getElementById('chatbotHint');
+
+  // Show hint after loader with delay
+  setTimeout(() => hint.classList.add('visible'), 2800);
+
+  // Hide hint on scroll
+  let hintHidden = false;
+  window.addEventListener('scroll', () => {
+    if (!hintHidden && window.scrollY > 200) {
+      hint.classList.remove('visible');
+      hint.classList.add('hidden');
+      hintHidden = true;
+    } else if (hintHidden && window.scrollY <= 100) {
+      hint.classList.remove('hidden');
+      hint.classList.add('visible');
+      hintHidden = false;
+    }
+  }, { passive: true });
+
+  // Hint click opens chat
+  hint.addEventListener('click', () => {
+    window_.classList.add('open');
+    hint.classList.remove('visible');
+    hint.classList.add('hidden');
+    hintHidden = true;
+    input.focus();
+  });
 
   toggle.addEventListener('click', () => {
     window_.classList.toggle('open');
     if (window_.classList.contains('open')) {
+      hint.classList.remove('visible');
+      hint.classList.add('hidden');
+      hintHidden = true;
       input.focus();
     }
   });

@@ -1273,6 +1273,62 @@ ul { list-style: none; }
   border: 0;
 }
 
+/* ===== CHATBOT HINT ===== */
+.chatbot-hint {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  border: 1px solid var(--border);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--dark);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s cubic-bezier(0.4,0,0.2,1), transform 0.5s cubic-bezier(0.4,0,0.2,1);
+  pointer-events: none;
+}
+
+.chatbot-hint.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.chatbot-hint.hidden {
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+}
+
+.chatbot-hint b {
+  color: var(--orange);
+}
+
+.chatbot-hint svg {
+  color: var(--orange);
+  animation: hintBounce 2s ease infinite;
+  flex-shrink: 0;
+}
+
+@keyframes hintBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+.chatbot-hint:hover {
+  border-color: var(--orange);
+  box-shadow: 0 4px 24px rgba(212,119,44,0.15);
+}
+
 /* ===== CHATBOT ===== */
 .chatbot-toggle {
   position: fixed;
