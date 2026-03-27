@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt oss — EIR Trening</title>
+  <meta name="description" content="Kontakt EIR Trening for gratis prøvetime og omvisning. Telefon 99 25 70 00. Tomteveien 31A, 1618 Fredrikstad.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="eir logo.png" alt="EIR Trening"></a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#om">Om oss</a>
+        <a href="tilbud.html">Tilbud</a>
+        <a href="trenere.html">Trenere</a>
+        <a href="index.html#timeplan">Timeplan</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="kontakt.html" class="nav-cta">Prøv gratis →</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Meny"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label" style="color:var(--orange)">Kontakt</span>
+      <h1>Book gratis prøvetime</h1>
+      <p>Prøv senteret helt uforpliktende. Vi viser deg rundt og svarer på alle spørsmål.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Form -->
+        <div class="fade-up">
+          <h2 style="font-family:var(--font-heading);font-size:28px;font-weight:600;margin-bottom:8px">Send oss en melding</h2>
+          <p style="font-size:15px;color:var(--dark-soft);margin-bottom:28px">Fyll ut skjemaet så tar vi kontakt innen 24 timer.</p>
+          <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+              <div>
+                <label for="name">Navn *</label>
+                <input type="text" id="name" name="name" required placeholder="Ditt navn">
+              </div>
+              <div>
+                <label for="phone">Telefon *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Ditt telefonnummer">
+              </div>
+            </div>
+            <label for="email">E-post *</label>
+            <input type="email" id="email" name="email" required placeholder="Din e-postadresse">
+            <label for="interest">Hva er du interessert i?</label>
+            <select id="interest" name="interest">
+              <option value="">Velg...</option>
+              <option value="Gratis prøvetime">Gratis prøvetime og omvisning</option>
+              <option value="EIR Basis">EIR Basis-medlemskap</option>
+              <option value="Personlig trening">Personlig trening (PT)</option>
+              <option value="All Inclusive VIP">All Inclusive VIP</option>
+              <option value="Gruppetimer">Gruppetimer</option>
+              <option value="HYROX">HYROX Training Club</option>
+              <option value="Bedriftstrening">Bedriftstrening</option>
+              <option value="Annet">Annet spørsmål</option>
+            </select>
+            <label for="message">Melding</label>
+            <textarea id="message" name="message" rows="4" placeholder="Fortell oss gjerne litt om deg selv og hva du er ute etter..."></textarea>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px">Send melding →</button>
+          </form>
+        </div>
+
+        <!-- Info + Map -->
+        <div class="fade-up" style="transition-delay:0.2s">
+          <div class="contact-info-card">
+            <h3>Kontaktinformasjon</h3>
+            <div class="footer-contact-item" style="margin-bottom:16px">
+              <svg viewBox="0 -960 960 960" style="width:20px;height:20px;fill:var(--orange)"><path d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Z"/></svg>
+              <div>
+                <div style="font-weight:600;color:var(--dark)">Telefon</div>
+                <a href="tel:99257000" style="color:var(--orange)">99 25 70 00</a>
+              </div>
+            </div>
+            <div class="footer-contact-item" style="margin-bottom:16px">
+              <svg viewBox="0 -960 960 960" style="width:20px;height:20px;fill:var(--orange)"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200Z"/></svg>
+              <div>
+                <div style="font-weight:600;color:var(--dark)">E-post</div>
+                <a href="mailto:post@eirtrening.no" style="color:var(--orange)">post@eirtrening.no</a>
+              </div>
+            </div>
+            <div class="footer-contact-item" style="margin-bottom:16px">
+              <svg viewBox="0 -960 960 960" style="width:20px;height:20px;fill:var(--orange)"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Z"/></svg>
+              <div>
+                <div style="font-weight:600;color:var(--dark)">Adresse</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=EIR%20Trening%2C%20Tomteveien%2031A%2C%201618%20Fredrikstad" target="_blank" style="color:var(--orange)">Tomteveien 31A, 1618 Fredrikstad</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <h3>Åpningstider</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 24px;font-size:14px">
+              <span style="font-weight:600;color:var(--dark)">Mandag – torsdag</span><span>06:00 – 22:00</span>
+              <span style="font-weight:600;color:var(--dark)">Fredag</span><span>06:00 – 21:00</span>
+              <span style="font-weight:600;color:var(--dark)">Lørdag</span><span>09:00 – 17:00</span>
+              <span style="font-weight:600;color:var(--dark)">Søndag</span><span>10:00 – 18:00</span>
+            </div>
+          </div>
+
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2048.5!2d10.964!3d59.218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sTomteveien%2031A%2C%201618%20Fredrikstad!5e0!3m2!1snb!2sno!4v1"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="EIR Trening på Google Maps">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="eir logo.png" alt="EIR Trening">
+          <p>Fredrikstads mest unike treningssenter. Kvalitet, kompetanse og service — det lille ekstra.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com/eirtrening" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://instagram.com/eirtrening" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
+          </div>
+        </div>
+        <div><h4>Åpningstider</h4><div class="footer-hours">Man – tor: 06 – 22<br>Fredag: 06 – 21<br>Lørdag: 09 – 17<br>Søndag: 10 – 18</div></div>
+        <div>
+          <h4>Kontakt</h4>
+          <div class="footer-contact-item"><svg viewBox="0 -960 960 960"><path d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Z"/></svg><a href="tel:99257000">99 25 70 00</a></div>
+          <div class="footer-contact-item"><svg viewBox="0 -960 960 960"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200Z"/></svg><a href="mailto:post@eirtrening.no">post@eirtrening.no</a></div>
+          <div class="footer-cta"><a href="kontakt.html" class="btn btn-primary btn-sm">Book gratis prøvetime</a></div>
+        </div>
+        <div><h4>Sider</h4><div class="footer-links"><a href="index.html">Hjem</a><a href="tilbud.html">Medlemskap</a><a href="trenere.html">Trenere</a><a href="kontakt.html">Kontakt</a><a href="https://minside.eirtrening.no" target="_blank">Min Side</a></div></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 EIR Trening AS</p>
+        <div class="footer-bottom-links"><a href="#">Personvernerklæring</a><a href="#">Vilkår</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50));
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+  <script src="chatbot.js"></script>
+
+</body>
+</html>
