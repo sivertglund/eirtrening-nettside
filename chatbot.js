@@ -145,11 +145,28 @@
       </svg>
     </div>
     <button class="chatbot-toggle" id="chatbotToggle" aria-label="Åpne chat">
-      <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+      <svg viewBox="0 0 40 40" fill="none">
+        <!-- Diamond head (EIR-style) -->
+        <path d="M20 6 L32 18 Q33 19 32 20 L22 30 Q21 31 20 30 L10 20 Q9 19 10 18 L20 8 Q20 7 20 6 Z" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="1.5"/>
+        <!-- Eyes -->
+        <circle cx="16" cy="18" r="1.8" fill="white"/>
+        <circle cx="24" cy="18" r="1.8" fill="white"/>
+        <!-- Smile -->
+        <path d="M16 22.5 Q20 26 24 22.5" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        <!-- Antenna -->
+        <line x1="20" y1="6" x2="20" y2="2" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="20" cy="1.5" r="1.5" fill="white"/>
+      </svg>
     </button>
     <div class="chatbot-window" id="chatbotWindow">
       <div class="chatbot-header">
-        <div class="chatbot-header-avatar">E</div>
+        <div class="chatbot-header-avatar">
+          <svg viewBox="0 0 40 40" fill="none" width="22" height="22">
+            <path d="M20 8 L30 18 Q31 19 30 20 L22 28 Q21 29 20 28 L12 20 Q11 19 12 18 L20 10 Q20 9 20 8 Z" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.5"/>
+            <circle cx="17" cy="18.5" r="1.5" fill="white"/><circle cx="23" cy="18.5" r="1.5" fill="white"/>
+            <path d="M17 22 Q20 25 23 22" stroke="white" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
         <div class="chatbot-header-info">
           <h4>EIR-assistenten</h4>
           <span>Alltid klar til å hjelpe</span>
