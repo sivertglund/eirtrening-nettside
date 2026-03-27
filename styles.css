@@ -12,8 +12,8 @@
   --warm-light: #FAF7F3;
   --white: #ffffff;
   --border: rgba(0,0,0,0.08);
-  --font-body: 'Inter', -apple-system, sans-serif;
-  --font-heading: 'Montserrat', -apple-system, sans-serif;
+  --font-body: 'Outfit', -apple-system, sans-serif;
+  --font-heading: 'Outfit', -apple-system, sans-serif;
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
   --shadow-md: 0 4px 20px rgba(0,0,0,0.06);
   --shadow-lg: 0 8px 40px rgba(0,0,0,0.08);
@@ -243,8 +243,8 @@ ul { list-style: none; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(44,44,44,0.45) 0%, rgba(44,44,44,0.65) 50%, rgba(44,44,44,0.85) 100%),
-    url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=80') center/cover no-repeat;
+    linear-gradient(180deg, rgba(44,44,44,0.4) 0%, rgba(44,44,44,0.6) 50%, rgba(44,44,44,0.85) 100%),
+    url('images/eir bilde.jpg') center/cover no-repeat;
 }
 
 .hero-content {
@@ -370,8 +370,24 @@ ul { list-style: none; }
 /* ===== FORDELER (BENEFITS) ===== */
 .benefits {
   padding: 100px 0;
-  background: var(--white);
+  background: var(--dark);
+  position: relative;
+  overflow: hidden;
 }
+
+.benefits::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(212, 119, 44, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.benefits .section-title { color: var(--white); }
+.benefits .section-subtitle { color: rgba(255,255,255,0.6); }
 
 .benefits-grid {
   display: grid;
@@ -382,15 +398,34 @@ ul { list-style: none; }
 .benefit-card {
   padding: 32px 24px;
   text-align: center;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  transition: all 0.3s;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(212, 119, 44, 0.12) 0%, rgba(212, 119, 44, 0.04) 100%);
+  border: 1px solid rgba(212, 119, 44, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.benefit-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(212, 119, 44, 0.06) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s;
 }
 
 .benefit-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: rgba(212, 119, 44, 0.2);
+  transform: translateY(-6px);
+  border-color: rgba(212, 119, 44, 0.35);
+  box-shadow: 0 12px 40px rgba(212, 119, 44, 0.15), 0 0 0 1px rgba(212, 119, 44, 0.1);
+}
+
+.benefit-card:hover::before {
+  opacity: 1;
 }
 
 .benefit-icon {
@@ -399,10 +434,21 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--orange-light);
+  background: linear-gradient(135deg, rgba(212, 119, 44, 0.2) 0%, rgba(212, 119, 44, 0.08) 100%);
   border-radius: 14px;
   margin: 0 auto 16px;
-  font-size: 26px;
+  position: relative;
+  z-index: 1;
+}
+
+.benefit-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: var(--orange);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .benefit-card h3 {
@@ -410,13 +456,17 @@ ul { list-style: none; }
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 8px;
-  color: var(--dark);
+  color: var(--white);
+  position: relative;
+  z-index: 1;
 }
 
 .benefit-card p {
   font-size: 14px;
   line-height: 1.6;
-  color: var(--dark-soft);
+  color: rgba(255,255,255,0.6);
+  position: relative;
+  z-index: 1;
 }
 
 /* ===== FACILITIES GALLERY ===== */
@@ -661,8 +711,8 @@ ul { list-style: none; }
   content: '';
   position: absolute;
   inset: 0;
-  background: url('https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=1920&q=80') center/cover no-repeat;
-  opacity: 0.12;
+  background: url('images/eir bilde 5.jpg') center/cover no-repeat;
+  opacity: 0.1;
 }
 
 .hyrox-inner {
