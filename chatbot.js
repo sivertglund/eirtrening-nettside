@@ -108,6 +108,50 @@
     {
       keywords: ['garderobe', 'skap', 'oppbevaring'],
       answer: 'Alle medlemmer har tilgang til garderober med rene håndklær og Rituals-toalettartikler. Med <b>All Inclusive VIP</b> får du ditt eget personlige garderobeskap!'
+    },
+    {
+      keywords: ['darren', 'hockey', 'canada'],
+      answer: '<b>Darren</b> er tidligere profesjonell hockeyspiller fra Toronto, Canada. Han har vært PT siden 2004, er sportssjef for Stjernen Hockey Elite, og har NHL training camp-erfaring med St. Louis Blues og Toronto Maple Leafs. Spesialisering: styrke, funksjonell trening og idrettsprestasjoner.'
+    },
+    {
+      keywords: ['marius', 'crossfit games'],
+      answer: '<b>Marius</b> har CrossFit Games-erfaring og er instruktør og utvikler av FuncFit-konseptet hos EIR. Han spesialiserer seg på vektløfting og funksjonell trening.'
+    },
+    {
+      keywords: ['joacim'],
+      answer: '<b>Joacim</b> er HYROX-spesialist og FuncFit-instruktør med erfaring innen konkurranseforberedelse. Fokus på utholdenhet og funksjonell kapasitet.'
+    },
+    {
+      keywords: ['nadin'],
+      answer: '<b>Nadin</b> kombinerer trening og ernæring. Sertifisert innen ernæring med spesialisering på vektnedgang og livsstilsendring.'
+    },
+    {
+      keywords: ['partner wod', 'wod', 'funcfit timer'],
+      answer: 'FuncFit® har flere timetyper:\n\n• <b>FuncFit® WOD</b> — Workout of the Day\n• <b>FuncFit® Partner WOD</b> — 60 min partrening\n\nAlle øvelser tilpasses ditt nivå. Trenere: Marius (CrossFit Games-erfaring), Joacim, og Tina Wingereid (prof. turner).'
+    },
+    {
+      keywords: ['hyrox fordel', 'hyrox rabatt', 'hyrox påmelding', 'fortrinnsrett'],
+      answer: 'Som HYROX-medlem hos EIR får du:\n\n• 48 timers fortrinnsrett på konkurransepåmelding\n• 10% rabattkode\n• Offisiell HYROX-programmering\n• Introkurs for nybegynnere\n• Kategorier: Singles, Relay, Doubles, Adaptive\n\nKommunikasjon skjer via FITR-portalen.'
+    },
+    {
+      keywords: ['bedrift', 'firma', 'sykefravær', 'ansatte', 'corporate'],
+      answer: 'Vi tilbyr <b>bedriftstrening</b> — skreddersydde opplegg for å redusere sykefravær og øke trivsel:\n\n• 1:1 eller gruppetrening\n• Skjermet PT-område for privathet\n• Tverrfaglig team: PT + fysioterapeut + kiropraktor + akupunktør\n\nKontakt oss for et uforpliktende møte!'
+    },
+    {
+      keywords: ['kickstart', 'nybegynner', 'komme i gang', 'starte'],
+      answer: '<b>Kickstart</b> er vårt nybegynnerprogram for deg som vil komme i gang med trening. Et strukturert opplegg med personlig oppfølging som gir deg en trygg og effektiv start. Perfekt om du er ny på trening eller har hatt en lang pause.'
+    },
+    {
+      keywords: ['trenere', 'hvem trener', 'hvor mange trenere'],
+      answer: 'Vi har 9 erfarne personlige trenere:\n\n• <b>Darren</b> — Styrke, funksjonell (tidl. NHL)\n• <b>Hans Henry</b> — Rehabilitering\n• <b>Joacim</b> — HYROX, utholdenhet\n• <b>Marius</b> — FuncFit, CrossFit Games\n• <b>Nadin</b> — Kosthold, vektnedgang\n• <b>Roger</b> — Seniortrening, mobilitet\n• <b>Rolf</b> — Styrke, hypertrofi\n• <b>Sander</b> — HYROX, FuncFit\n• <b>Sigurd</b> — Idrettsprestasjoner\n\nSe alle på trenere-siden!'
+    },
+    {
+      keywords: ['rituals', 'håndkle', 'toalett'],
+      answer: 'Alle medlemmer får rene håndklær og toalettartikler fra <b>Rituals</b> — inkludert i alle medlemskap. Premium hverdagsluksus!'
+    },
+    {
+      keywords: ['jobb', 'jobbe', 'stilling', 'ledig', 'cv'],
+      answer: 'Vi ser alltid etter dyktige og engasjerte trenere! Send din CV til <a href="mailto:post@eirtrening.no" style="color:#D4772C">post@eirtrening.no</a> så tar vi kontakt.'
     }
   ];
 
