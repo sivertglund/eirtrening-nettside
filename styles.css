@@ -148,6 +148,27 @@ ul { list-style: none; }
 
 .nav-cta::after { display: none !important; }
 
+.nav-minside {
+  padding: 8px 16px !important;
+  border: 1.5px solid rgba(255,255,255,0.3) !important;
+  border-radius: 6px;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+  transition: all 0.3s !important;
+}
+
+.nav.scrolled .nav-minside {
+  border-color: var(--border) !important;
+}
+
+.nav-minside:hover {
+  border-color: var(--orange) !important;
+  color: var(--orange) !important;
+}
+
+.nav-minside::after { display: none !important; }
+
 /* Mobile nav toggle */
 .nav-toggle {
   display: none;

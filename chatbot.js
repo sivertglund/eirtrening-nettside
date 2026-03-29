@@ -131,7 +131,7 @@
     },
     {
       keywords: ['hyrox fordel', 'hyrox rabatt', 'hyrox påmelding', 'fortrinnsrett'],
-      answer: 'Som HYROX-medlem hos EIR får du:\n\n• 48 timers fortrinnsrett på konkurransepåmelding\n• 10% rabattkode\n• Offisiell HYROX-programmering\n• Introkurs for nybegynnere\n• Kategorier: Singles, Relay, Doubles, Adaptive\n\nKommunikasjon skjer via FITR-portalen.'
+      answer: 'Som HYROX-medlem hos EIR får du:\n\n• 48 timers fortrinnsrett på konkurransepåmelding\n• 10% rabattkode\n• Offisiell HYROX-programmering\n• Introkurs for nybegynnere\n• Kategorier: Singles, Relay, Doubles, Adaptive\n\nBook plass og se kommunikasjon på <a href="https://minside.eirtrening.no/" target="_blank" style="color:#D4772C">Min Side</a>.'
     },
     {
       keywords: ['bedrift', 'firma', 'sykefravær', 'ansatte', 'corporate'],
