@@ -389,28 +389,106 @@
     <div class="container">
       <div class="section-header fade-up">
         <span class="section-label">Gruppetimer</span>
-        <h2 class="section-title">Ukens timeplan</h2>
-        <p class="section-subtitle">Over 40 gruppetimer per uke. Book din plass på Min Side.</p>
+        <h2 class="section-title">Timeplan vår 2026</h2>
+        <p class="section-subtitle">Over 40 gruppetimer per uke. Timeplanen kan endres — se alltid oppdatert timeplan på Min Side.</p>
       </div>
-      <div class="schedule-table-wrapper fade-up">
-        <table class="schedule-table">
-          <thead>
-            <tr><th>Tid</th><th>Mandag</th><th>Tirsdag</th><th>Onsdag</th><th>Torsdag</th><th>Fredag</th><th>Lørdag</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>07:00</td><td class="s-funcfit">FuncFit®</td><td class="s-hyrox">HYROX</td><td class="s-funcfit">FuncFit®</td><td class="s-hyrox">HYROX</td><td class="s-funcfit">FuncFit®</td><td></td></tr>
-            <tr><td>09:00</td><td class="s-yoga">Yoga</td><td class="s-senior">Seniortrening</td><td class="s-mobility">Mobilitet</td><td class="s-senior">Seniortrening</td><td class="s-yoga">Yoga</td><td class="s-funcfit">FuncFit®</td></tr>
-            <tr><td>10:00</td><td class="s-spinning">Spinning</td><td class="s-yoga">Yoga</td><td class="s-spinning">Spinning</td><td class="s-taichi">Tai Chi</td><td class="s-spinning">Spinning</td><td class="s-hyrox">HYROX</td></tr>
-            <tr><td>12:00</td><td class="s-funcfit">FuncFit®</td><td></td><td class="s-boxing">Boksing</td><td></td><td></td><td></td></tr>
-            <tr><td>16:30</td><td class="s-hyrox">HYROX</td><td class="s-funcfit">FuncFit®</td><td class="s-hyrox">HYROX</td><td class="s-funcfit">FuncFit®</td><td></td><td></td></tr>
-            <tr><td>17:30</td><td class="s-boxing">Boksing</td><td class="s-spinning">Spinning</td><td class="s-funcfit">FuncFit®</td><td class="s-boxing">Boksing</td><td></td><td></td></tr>
-            <tr><td>18:30</td><td class="s-spinning">Spinning</td><td class="s-mobility">Mobilitet</td><td class="s-yoga">Yoga</td><td class="s-spinning">Spinning</td><td></td><td></td></tr>
-            <tr><td>19:30</td><td class="s-walk">Powerwalk</td><td class="s-taichi">Tai Chi</td><td></td><td class="s-walk">Powerwalk</td><td></td><td></td></tr>
-          </tbody>
-        </table>
+
+      <!-- Day filter tabs -->
+      <div class="schedule-tabs fade-up">
+        <button class="schedule-tab active" data-day="all">Alle</button>
+        <button class="schedule-tab" data-day="man">Man</button>
+        <button class="schedule-tab" data-day="tir">Tir</button>
+        <button class="schedule-tab" data-day="ons">Ons</button>
+        <button class="schedule-tab" data-day="tor">Tor</button>
+        <button class="schedule-tab" data-day="fre">Fre</button>
+        <button class="schedule-tab" data-day="lor">Lør</button>
+        <button class="schedule-tab" data-day="son">Søn</button>
       </div>
-      <p style="text-align:center;margin-top:20px;font-size:14px;color:var(--dark-soft)">
-        Forenklet oversikt — se full timeplan og book din plass på <a href="https://minside.eirtrening.no/" target="_blank" style="color:var(--orange);font-weight:600">Min Side →</a>
+
+      <div class="schedule-grid fade-up">
+
+        <!-- MANDAG -->
+        <div class="schedule-day" data-day="man">
+          <div class="schedule-day-header">Mandag</div>
+          <div class="schedule-session s-other"><span class="s-time">09:00</span><span class="s-name">Østfold Parkinsonforening</span></div>
+          <div class="schedule-session s-funcfit"><span class="s-time">10:00</span><span class="s-name">FuncFit WOD</span><span class="s-trainer">Joacim</span></div>
+          <div class="schedule-session s-walk"><span class="s-time">17:30</span><span class="s-name">PowerWalk 30</span><span class="s-trainer">Silje</span></div>
+          <div class="schedule-session s-running"><span class="s-time">18:15</span><span class="s-name">Løp intervall 30</span><span class="s-trainer">Silje</span></div>
+          <div class="schedule-session s-spinning"><span class="s-time">17:00</span><span class="s-name">Spinn intro</span><span class="s-trainer">Hege</span></div>
+          <div class="schedule-session s-spinning"><span class="s-time">17:30</span><span class="s-name">Spinn 45</span><span class="s-trainer">Hege</span></div>
+          <div class="schedule-session s-yoga"><span class="s-time">18:00</span><span class="s-name">Rise & Relax</span><span class="s-trainer">Christine</span></div>
+          <div class="schedule-session s-funcfit"><span class="s-time">18:00</span><span class="s-name">FuncFit WOD</span><span class="s-trainer">Joacim</span></div>
+          <div class="schedule-session s-funcfit"><span class="s-time">19:00</span><span class="s-name">FuncFit WOD</span><span class="s-trainer">Joacim</span></div>
+          <div class="schedule-session s-other"><span class="s-time">19:00</span><span class="s-name">TRX slynger</span><span class="s-trainer">Sander R</span></div>
+        </div>
+
+        <!-- TIRSDAG -->
+        <div class="schedule-day" data-day="tir">
+          <div class="schedule-day-header">Tirsdag</div>
+          <div class="schedule-session s-funcfit"><span class="s-time">06:15</span><span class="s-name">FuncFit Power</span><span class="s-trainer">Nadin / Sander H</span></div>
+          <div class="schedule-session s-funcfit"><span class="s-time">09:00</span><span class="s-name">FuncFit WOD</span><span class="s-trainer">Joacim</span></div>
+          <div class="schedule-session s-senior"><span class="s-time">12:00</span><span class="s-name">Hverdagssterk</span><span class="s-trainer">Hans Henry</span></div>
+          <div class="schedule-session s-hyrox"><span class="s-time">16:00</span><span class="s-name">HYROX</span><span class="s-trainer">Sigurd</span></div>
+          <div class="schedule-session s-walk"><span class="s-time">16:15</span><span class="s-name">PowerWalk 30</span><span class="s-trainer">Silje</span></div>
+          <div class="schedule-session s-walk"><span class="s-time">17:00</span><span class="s-name">PowerWalk 45</span><span class="s-trainer">Silje</span></div>
+          <div class="schedule-session s-mobility"><span class="s-time">17:00</span><span class="s-name">Mobilitet</span><span class="s-trainer">Nadin</span></div>
+          <div class="schedule-session s-funcfit"><span class="s-time">18:00</span><span class="s-name">FuncFit WOD</span><span class="s-trainer">Marius</span></div>
+          <div class="schedule-session s-other"><span class="s-time">19:00</span><span class="s-name">Sirkeltrening i styrkesal</span><span class="s-trainer">Rolf</span></div>
+        </div>
+
+        <!-- ONSDAG -->
+        <div class="schedule-day" data-day="ons">
+          <div class="schedule-day-header">Onsdag</div>
+          <div class="schedule-session s-funcfit"><span class="s-time">09:00</span><span class="s-name">FuncFit WOD</span><span class="s-trainer">Joacim</span></div>
+          <div class="schedule-session s-walk"><span class="s-time">16:30</span><span class="s-name">PowerWalk 30</span><span class="s-trainer">Silje</span></div>
+          <div class="schedule-session s-boxing"><span class="s-time">17:00</span><span class="s-name">Boksing</span><span class="s-trainer">Rolf</span></div>
+          <div class="schedule-session s-running"><span class="s-time">17:15</span><span class="s-name">Løp intervall 30</span><span class="s-trainer">Silje</span></div>
+          <div class="schedule-session s-funcfit"><span class="s-time">18:00</span><span class="s-name">FuncFit Partner</span><span class="s-trainer">Joacim</span></div>
+          <div class="schedule-session s-yoga"><span class="s-time">18:00</span><span class="s-name">Ashtanga yoga</span><span class="s-trainer">Christine</span></div>
+          <div class="schedule-session s-funcfit"><span class="s-time">19:00</span><span class="s-name">FuncFit WOD</span><span class="s-trainer">Joacim</span></div>
+        </div>
+
+        <!-- TORSDAG -->
+        <div class="schedule-day" data-day="tor">
+          <div class="schedule-day-header">Torsdag</div>
+          <div class="schedule-session s-funcfit"><span class="s-time">06:15</span><span class="s-name">FuncFit Power</span><span class="s-trainer">Nadin</span></div>
+          <div class="schedule-session s-funcfit"><span class="s-time">09:00</span><span class="s-name">FuncFit WOD</span><span class="s-trainer">Joacim</span></div>
+          <div class="schedule-session s-mobility"><span class="s-time">10:00</span><span class="s-name">Mobilitetstrening</span><span class="s-trainer">Nadin</span></div>
+          <div class="schedule-session s-senior"><span class="s-time">12:00</span><span class="s-name">Hverdagssterk</span><span class="s-trainer">Hans Henry</span></div>
+          <div class="schedule-session s-running"><span class="s-time">16:00</span><span class="s-name">Løp 50</span><span class="s-trainer">Sigurd</span></div>
+          <div class="schedule-session s-hyrox"><span class="s-time">17:00</span><span class="s-name">HYROX</span><span class="s-trainer">Sigurd</span></div>
+          <div class="schedule-session s-spinning"><span class="s-time">17:00</span><span class="s-name">Spinn 45</span><span class="s-trainer">Hege</span></div>
+          <div class="schedule-session s-funcfit"><span class="s-time">18:00</span><span class="s-name">FuncFit WOD</span><span class="s-trainer">Rolf</span></div>
+          <div class="schedule-session s-yoga"><span class="s-time">19:00</span><span class="s-name">Yin yoga 60</span><span class="s-trainer">Christine</span></div>
+        </div>
+
+        <!-- FREDAG -->
+        <div class="schedule-day" data-day="fre">
+          <div class="schedule-day-header">Fredag</div>
+          <div class="schedule-session s-yoga"><span class="s-time">07:00</span><span class="s-name">Rise & Shine</span><span class="s-trainer">Christine</span></div>
+          <div class="schedule-session s-other"><span class="s-time">09:00</span><span class="s-name">Østfold Parkinsonforening</span></div>
+          <div class="schedule-session s-funcfit"><span class="s-time">10:00</span><span class="s-name">FuncFit WOD</span><span class="s-trainer">Joacim</span></div>
+          <div class="schedule-session s-funcfit"><span class="s-time">16:00</span><span class="s-name">FuncFit WOD</span><span class="s-trainer">Sigurd</span></div>
+          <div class="schedule-session s-hyrox"><span class="s-time">17:00</span><span class="s-name">HYROX</span><span class="s-trainer">Sigurd</span></div>
+        </div>
+
+        <!-- LØRDAG -->
+        <div class="schedule-day" data-day="lor">
+          <div class="schedule-day-header">Lørdag</div>
+          <div class="schedule-session s-funcfit"><span class="s-time">09:30</span><span class="s-name">FuncFit Partner</span><span class="s-trainer">Joacim</span></div>
+          <div class="schedule-session s-spinning"><span class="s-time">10:30</span><span class="s-name">Spinn 45</span><span class="s-trainer">Hege</span></div>
+        </div>
+
+        <!-- SØNDAG -->
+        <div class="schedule-day" data-day="son">
+          <div class="schedule-day-header">Søndag</div>
+          <div class="schedule-session s-funcfit"><span class="s-time">10:30</span><span class="s-name">FuncFit Partner</span><span class="s-trainer">Marius, Rolf, Sander R, Sigurd</span></div>
+        </div>
+
+      </div>
+
+      <p style="text-align:center;margin-top:24px;font-size:14px;color:var(--dark-soft)">
+        Timeplanen er under kontinuerlig revidering. Book din plass senest 2 timer før timestart på <a href="https://minside.eirtrening.no/" target="_blank" style="color:var(--orange);font-weight:600">Min Side →</a>
       </p>
     </div>
   </section>
@@ -520,6 +598,18 @@
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Schedule day tabs
+    document.querySelectorAll('.schedule-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.schedule-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const day = tab.dataset.day;
+        document.querySelectorAll('.schedule-day').forEach(d => {
+          d.style.display = (day === 'all' || d.dataset.day === day) ? '' : 'none';
+        });
+      });
+    });
 
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(a => {
