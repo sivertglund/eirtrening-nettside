@@ -670,28 +670,35 @@ ul { list-style: none; }
   padding: 100px 0;
 }
 
-.facilities-scroll {
-  display: flex;
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: dense;
+  grid-auto-columns: 1fr;
   gap: 16px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding-bottom: 12px;
   scrollbar-width: thin;
   scrollbar-color: var(--orange) transparent;
+  padding-bottom: 8px;
 }
 
-.facilities-scroll::-webkit-scrollbar { height: 4px; }
-.facilities-scroll::-webkit-scrollbar-track { background: transparent; }
-.facilities-scroll::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 4px; }
+.facilities-grid::-webkit-scrollbar { height: 4px; }
+.facilities-grid::-webkit-scrollbar-track { background: transparent; }
+.facilities-grid::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 4px; }
 
 .facility-item {
   position: relative;
   border-radius: var(--radius);
   overflow: hidden;
-  flex: 0 0 340px;
   aspect-ratio: 4/3;
   cursor: pointer;
   scroll-snap-align: start;
+}
+
+.facility-item.tall {
+  grid-row: span 2;
+  aspect-ratio: auto;
 }
 
 .facility-item img {
