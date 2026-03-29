@@ -670,24 +670,28 @@ ul { list-style: none; }
   padding: 100px 0;
 }
 
-.facilities-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
+.facilities-scroll {
+  display: flex;
   gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--orange) transparent;
 }
+
+.facilities-scroll::-webkit-scrollbar { height: 4px; }
+.facilities-scroll::-webkit-scrollbar-track { background: transparent; }
+.facilities-scroll::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 4px; }
 
 .facility-item {
   position: relative;
   border-radius: var(--radius);
   overflow: hidden;
+  flex: 0 0 340px;
   aspect-ratio: 4/3;
   cursor: pointer;
-}
-
-.facility-item.tall {
-  grid-row: span 2;
-  aspect-ratio: auto;
+  scroll-snap-align: start;
 }
 
 .facility-item img {
