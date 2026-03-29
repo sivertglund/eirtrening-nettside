@@ -438,7 +438,7 @@ ul { list-style: none; }
   padding: 32px 24px;
   text-align: center;
   border-radius: 16px;
-  background: linear-gradient(135deg, rgba(212, 119, 44, 0.12) 0%, rgba(212, 119, 44, 0.04) 100%);
+  background: linear-gradient(135deg, rgba(212, 119, 44, 0.15) 0%, rgba(212, 119, 44, 0.06) 100%);
   border: 1px solid rgba(212, 119, 44, 0.18);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -447,14 +447,29 @@ ul { list-style: none; }
   overflow: hidden;
 }
 
+.benefit-bg {
+  position: absolute;
+  inset: 0;
+  background-image: var(--bg-img);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12;
+  transition: opacity 0.5s ease;
+}
+
+.benefit-card:hover .benefit-bg {
+  opacity: 0.22;
+}
+
 .benefit-card::before {
   content: '';
   position: absolute;
   inset: 0;
   border-radius: 16px;
-  background: linear-gradient(135deg, rgba(212, 119, 44, 0.06) 0%, transparent 60%);
+  background: linear-gradient(135deg, rgba(212, 119, 44, 0.08) 0%, transparent 60%);
   opacity: 0;
   transition: opacity 0.4s;
+  z-index: 1;
 }
 
 .benefit-card:hover {
