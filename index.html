@@ -611,15 +611,35 @@
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
     // Schedule day tabs
-    document.querySelectorAll('.schedule-tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        document.querySelectorAll('.schedule-tab').forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        const day = tab.dataset.day;
-        document.querySelectorAll('.schedule-day').forEach(d => {
-          d.style.display = (day === 'all' || d.dataset.day === day) ? '' : 'none';
-        });
+    const dayMap = ['son','man','tir','ons','tor','fre','lor'];
+    const isMobile = window.innerWidth <= 768;
+    const today = dayMap[new Date().getDay()];
+
+    function showScheduleDay(day) {
+      document.querySelectorAll('.schedule-tab').forEach(t => t.classList.remove('active'));
+      const activeTab = document.querySelector(`.schedule-tab[data-day="${day}"]`);
+      if (activeTab) activeTab.classList.add('active');
+      document.querySelectorAll('.schedule-day').forEach(d => {
+        if (day === 'all') {
+          d.style.display = '';
+          d.classList.add('mobile-visible');
+        } else {
+          const match = d.dataset.day === day;
+          d.style.display = match ? '' : 'none';
+          d.classList.toggle('mobile-visible', match);
+        }
       });
+    }
+
+    // On mobile: show today only. On desktop: show all.
+    if (isMobile) {
+      showScheduleDay(today);
+    } else {
+      document.querySelectorAll('.schedule-day').forEach(d => d.classList.add('mobile-visible'));
+    }
+
+    document.querySelectorAll('.schedule-tab').forEach(tab => {
+      tab.addEventListener('click', () => showScheduleDay(tab.dataset.day));
     });
 
     // Smooth scroll
