@@ -1671,6 +1671,22 @@ ul { list-style: none; }
   font-size: 18px;
 }
 
+.chatbot-close {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.chatbot-close:hover {
+  color: var(--white);
+  background: rgba(255,255,255,0.1);
+}
+
 .chatbot-header-info h4 {
   font-size: 14px;
   font-weight: 600;

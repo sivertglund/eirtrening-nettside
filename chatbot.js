@@ -215,6 +215,9 @@
           <h4>EIR-assistenten</h4>
           <span>Alltid klar til å hjelpe</span>
         </div>
+        <button class="chatbot-close" id="chatbotClose" aria-label="Lukk chat">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
       </div>
       <div class="chatbot-messages" id="chatMessages">
         <div class="chat-message chat-bot">Hei! 👋 Jeg er EIR-assistenten. Jeg kan hjelpe deg med spørsmål om medlemskap, priser, gruppetimer, åpningstider og alt annet om EIR Trening. Hva lurer du på?</div>
@@ -261,6 +264,10 @@
     input.focus();
   });
 
+  function closeChat() {
+    window_.classList.remove('open');
+  }
+
   toggle.addEventListener('click', () => {
     window_.classList.toggle('open');
     if (window_.classList.contains('open')) {
@@ -269,6 +276,12 @@
       hintHidden = true;
       input.focus();
     }
+  });
+
+  document.getElementById('chatbotClose').addEventListener('click', closeChat);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && window_.classList.contains('open')) closeChat();
   });
 
   function sendMessage() {
