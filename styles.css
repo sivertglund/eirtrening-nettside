@@ -1764,6 +1764,7 @@ ul { list-style: none; }
 }
 
 @media (max-width: 768px) {
+  /* ---- Nav mobile menu ---- */
   .nav-links {
     display: none;
     position: fixed;
@@ -1775,7 +1776,8 @@ ul { list-style: none; }
     backdrop-filter: blur(10px);
     flex-direction: column;
     justify-content: center;
-    gap: 28px;
+    align-items: center;
+    gap: 20px;
     z-index: 999;
   }
 
@@ -1786,17 +1788,100 @@ ul { list-style: none; }
     color: var(--white) !important;
   }
 
+  .nav-cta, .nav-cta-secondary, .nav-minside {
+    font-size: 14px !important;
+    padding: 12px 24px !important;
+  }
+
+  .nav-minside {
+    border-color: rgba(255,255,255,0.3) !important;
+    color: rgba(255,255,255,0.7) !important;
+  }
+
   .nav-toggle { display: flex; }
 
-  .benefits-grid { grid-template-columns: 1fr; }
-  .facilities-grid { grid-template-columns: 1fr 1fr; }
+  /* ---- General spacing ---- */
+  section { padding: 60px 0 !important; }
+  .container { padding: 0 16px; }
+  .section-title { font-size: 26px; }
+  .section-subtitle { font-size: 14px; }
+  .section-label { font-size: 11px; }
+
+  /* ---- Hero ---- */
+  .hero { min-height: 85vh; }
+  .hero h1 { font-size: 28px; }
+  .hero p { font-size: 15px; }
+  .hero-badge { font-size: 10px; padding: 5px 14px; margin-bottom: 20px; }
+  .hero-buttons { flex-direction: column; align-items: center; gap: 10px; }
+  .hero-buttons .btn { width: 100%; justify-content: center; }
+
+  /* ---- Page hero (subpages) ---- */
+  .page-hero h1 { font-size: 26px; }
+  .page-hero p { font-size: 14px; }
+
+  /* ---- Benefits grid ---- */
+  .benefits-grid { grid-template-columns: 1fr; gap: 12px; }
+  .benefit-card { padding: 24px 20px; }
+  .benefit-card h3 { font-size: 15px; }
+  .benefit-card p { font-size: 13px; }
+
+  /* ---- Training ticker ---- */
+  .training-ticker { gap: 8px; }
+  .ticker-item { padding: 8px 16px; font-size: 13px; }
+
+  /* ---- Facilities gallery ---- */
+  .facilities-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .facility-item { flex: 0 0 260px; }
   .facility-item.tall { grid-row: auto; aspect-ratio: 4/3; }
-  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
-  .footer-bottom { flex-direction: column; text-align: center; }
-  .hero-buttons { flex-direction: column; align-items: center; }
+  .facility-overlay { padding: 16px; opacity: 1; }
+  .facility-overlay span { font-size: 13px; }
+
+  /* ---- Pricing cards ---- */
+  .pricing-cards { grid-template-columns: 1fr; max-width: 100%; }
+  .pricing-card { padding: 28px 20px; }
+
+  /* ---- Comparison table ---- */
+  .comparison-table-wrapper { font-size: 12px; }
+  .comparison-table thead th { padding: 10px 6px; font-size: 10px; }
+  .comparison-table tbody td { padding: 8px 4px; font-size: 11px; }
+  .comparison-table tbody td:first-child { font-size: 11px; min-width: 100px; }
+  .btn-table { padding: 8px 10px; font-size: 10px; }
+
+  /* ---- Membership cards ---- */
+  .membership-card { padding: 24px 20px; }
+
+  /* ---- Testimonials ---- */
+  .testimonials-grid { grid-template-columns: 1fr; max-width: 100%; }
+  .testimonial-card { padding: 24px 20px; }
+
+  /* ---- HYROX banner ---- */
+  .hyrox-inner { flex-direction: column; text-align: center; gap: 24px; }
+  .hyrox p { margin-left: auto; margin-right: auto; }
+  .hyrox-image { flex: none; width: 100%; max-width: 400px; margin: 0 auto; }
+
+  /* ---- Schedule ---- */
+  .schedule-tabs { gap: 4px; }
+  .schedule-tab { padding: 6px 12px; font-size: 12px; }
+  .schedule-grid { grid-template-columns: 1fr; }
+  .schedule-session { padding: 8px 14px; font-size: 12px; }
+  .schedule-day-header { padding: 12px 14px; font-size: 13px; }
+
+  /* ---- CTA banner ---- */
+  .cta-banner h2 { font-size: 24px; }
+  .cta-banner p { font-size: 14px; }
   .cta-contact { flex-direction: column; gap: 12px; }
+
+  /* ---- Footer ---- */
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
+
+  /* ---- Trainers ---- */
   .trainers-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
 
+  /* ---- Chatbot ---- */
   .chatbot-window {
     bottom: 0;
     right: 0;
@@ -1805,4 +1890,17 @@ ul { list-style: none; }
     max-height: 100vh;
     border-radius: 16px 16px 0 0;
   }
+}
+
+/* ---- Extra small screens ---- */
+@media (max-width: 480px) {
+  .hero h1 { font-size: 24px; }
+  .hero p { font-size: 14px; }
+  .section-title { font-size: 22px; }
+  .facilities-grid { grid-template-columns: 1fr; }
+  .facility-item { flex: 0 0 100%; }
+  .comparison-table thead th { padding: 8px 4px; font-size: 9px; }
+  .comparison-table tbody td { padding: 6px 3px; font-size: 10px; }
+  .btn-table { padding: 6px 8px; font-size: 9px; }
+  .schedule-session .s-trainer { display: none; }
 }
