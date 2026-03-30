@@ -1395,6 +1395,36 @@ ul { list-style: none; }
   object-fit: cover;
 }
 
+.trainer-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--warm-bg) 0%, #e8e0d8 100%);
+}
+
+.trainer-placeholder svg {
+  width: 64px;
+  height: 64px;
+  fill: none;
+  stroke: rgba(0,0,0,0.15);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.trainer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 8px 0 12px;
+  font-size: 13px;
+}
+
+.trainer-contact a {
+  color: var(--orange);
+  font-weight: 500;
+}
+
 .trainer-info {
   padding: 24px;
 }
