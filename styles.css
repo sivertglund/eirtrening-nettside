@@ -1833,16 +1833,18 @@ ul { list-style: none; }
 
   /* ---- Facilities gallery ---- */
   .facilities-grid {
-    display: flex;
+    display: flex !important;
     flex-wrap: wrap;
     gap: 8px;
     overflow-x: visible;
+    grid-template-columns: none;
   }
-  .facility-item {
-    flex: 0 0 calc(50% - 4px);
-    aspect-ratio: 4/3;
+  .facilities-grid .facility-item,
+  .facilities-grid .facility-item.tall {
+    flex: 0 0 calc(50% - 4px) !important;
+    aspect-ratio: 4/3 !important;
+    grid-row: auto;
   }
-  .facility-item.tall { grid-row: auto; aspect-ratio: 4/3; flex: 0 0 calc(50% - 4px); }
   .facility-overlay { padding: 12px; opacity: 1; }
   .facility-overlay span { font-size: 12px; }
 
