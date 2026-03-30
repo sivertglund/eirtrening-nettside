@@ -331,7 +331,7 @@
       <div class="training-grid fade-up">
 
         <!-- FuncFit (featured) -->
-        <div class="training-card featured">
+        <div class="training-card featured" id="funcfit">
           <h3>FuncFit&reg;</h3>
           <p>EIRs eget varemerke innen funksjonell trening. Høy intensitet, fellesskap og resultater — tilpasset alle nivåer.</p>
           <button class="training-toggle">Les mer <span class="toggle-icon">+</span></button>
@@ -349,7 +349,7 @@
         </div>
 
         <!-- HYROX (featured) -->
-        <div class="training-card featured">
+        <div class="training-card featured" id="hyrox">
           <h3>HYROX</h3>
           <p>Tren mot den verdensomspennende fitnesskonkurransen. EIR følger offisiell HYROX-programmering — løping + 8 funksjonelle stasjoner.</p>
           <button class="training-toggle">Les mer <span class="toggle-icon">+</span></button>
@@ -367,38 +367,91 @@
           </div>
         </div>
 
-        <!-- Standard cards -->
-        <div class="training-card">
+        <!-- Standard cards with accordion -->
+        <div class="training-card" id="boksing">
           <h3>Boksing</h3>
           <p>Teknikk, kondisjon og styrke i en og samme time. Lær grunnleggende slag, fotarbeid og forsvar.</p>
+          <button class="training-toggle">Les mer <span class="toggle-icon">+</span></button>
+          <div class="training-detail">
+            <div class="training-detail-inner">
+              <p><em>Detaljert informasjon om boksetimene kommer snart.</em></p>
+              <p>Instruktør: Rolf Lavarez (Fredrikstad Bokseklubb)</p>
+            </div>
+          </div>
         </div>
-        <div class="training-card">
+        <div class="training-card" id="yoga">
           <h3>Yoga</h3>
           <p>Øk bevegelighet, styrke og indre ro. Passer alle — fra nybegynner til viderekomne.</p>
+          <button class="training-toggle">Les mer <span class="toggle-icon">+</span></button>
+          <div class="training-detail">
+            <div class="training-detail-inner">
+              <p><em>Detaljert informasjon om yogatimene kommer snart.</em></p>
+              <p>Instruktører: Christine Serigstad (Ashtanga, Yin, Nidra) og Monica Hovind (Vinyasa, Breathwork)</p>
+            </div>
+          </div>
         </div>
-        <div class="training-card">
+        <div class="training-card" id="spinning">
           <h3>Spinning</h3>
           <p>Effektiv kondisjonstrening på sykkel med musikk og motiverende instruktør. Høy forbrenning på kort tid.</p>
+          <button class="training-toggle">Les mer <span class="toggle-icon">+</span></button>
+          <div class="training-detail">
+            <div class="training-detail-inner">
+              <p><em>Detaljert informasjon om spinningtimene kommer snart.</em></p>
+              <p>Instruktører: Hege Borg og Per Gjerløw</p>
+            </div>
+          </div>
         </div>
-        <div class="training-card">
+        <div class="training-card" id="taichi">
           <h3>Tai Chi</h3>
           <p>Rolige, flytende bevegelser som styrker balanse, koordinasjon og mental fokus.</p>
+          <button class="training-toggle">Les mer <span class="toggle-icon">+</span></button>
+          <div class="training-detail">
+            <div class="training-detail-inner">
+              <p>Tai Chi er blant de mest populære treningsformene i verden. Fokuserer på avspenning, styrking av kjernemuskulatur, pust, meditasjon, holdning og balanse.</p>
+              <p>Instruktør: Brynjulf Haugan — utdannet ved Academy of Classical Oriental Sciences i Canada (2007), naturmedisiner og akupunktør.</p>
+            </div>
+          </div>
         </div>
-        <div class="training-card">
+        <div class="training-card" id="mobilitet">
           <h3>Mobilitetstrening</h3>
           <p>Målrettet arbeid med leddbevegelighet og muskelfleksibilitet. Perfekt som supplement til styrketrening.</p>
+          <button class="training-toggle">Les mer <span class="toggle-icon">+</span></button>
+          <div class="training-detail">
+            <div class="training-detail-inner">
+              <p><em>Detaljert informasjon om mobilitetstrening kommer snart.</em></p>
+            </div>
+          </div>
         </div>
-        <div class="training-card">
+        <div class="training-card" id="powerwalk">
           <h3>Powerwalk &amp; Løping</h3>
           <p>Utendørs trening med instruktør. Tilpasset tempo — fra rolig gåtur til intervaller.</p>
+          <button class="training-toggle">Les mer <span class="toggle-icon">+</span></button>
+          <div class="training-detail">
+            <div class="training-detail-inner">
+              <p><em>Detaljert informasjon om powerwalk og løpetimer kommer snart.</em></p>
+            </div>
+          </div>
         </div>
-        <div class="training-card">
+        <div class="training-card" id="seniortrening">
           <h3>Seniortrening / Hverdagssterk</h3>
           <p>Trening for deg som vil holde deg sterk, mobil og selvstendig i hverdagen. Tilpasset alle forutsetninger.</p>
+          <button class="training-toggle">Les mer <span class="toggle-icon">+</span></button>
+          <div class="training-detail">
+            <div class="training-detail-inner">
+              <p><em>Detaljert informasjon om seniortrening kommer snart.</em></p>
+              <p>Instruktør: Hans Henry (ukentlig «Hverdagssterk»-time)</p>
+            </div>
+          </div>
         </div>
-        <div class="training-card">
+        <div class="training-card" id="kickstart">
           <h3>Kickstart</h3>
           <p>Introduksjonsprogram for nye medlemmer. Lær øvelser, teknikk og bli kjent med senteret og trenerne.</p>
+          <button class="training-toggle">Les mer <span class="toggle-icon">+</span></button>
+          <div class="training-detail">
+            <div class="training-detail-inner">
+              <p><em>Detaljert informasjon om Kickstart-programmet kommer snart.</em></p>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -615,6 +668,20 @@
         }
       });
     });
+
+    // Auto-expand training card from URL hash (e.g. tilbud.html#boksing)
+    if (window.location.hash) {
+      const id = window.location.hash.slice(1);
+      const card = document.getElementById(id);
+      if (card && card.classList.contains('training-card')) {
+        const detail = card.querySelector('.training-detail');
+        if (detail) {
+          card.classList.add('open');
+          detail.style.maxHeight = detail.scrollHeight + 'px';
+        }
+        setTimeout(() => card.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300);
+      }
+    }
   </script>
   <script src="chatbot.js"></script>
 
